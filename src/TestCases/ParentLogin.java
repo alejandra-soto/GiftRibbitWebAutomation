@@ -2,7 +2,6 @@ package TestCases;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -55,7 +54,8 @@ public class ParentLogin {
         System.out.println("Password has been entered");
 
         // Find Sign-in Button and Click button 
-        WebElement submitForm = shadowRoot1.findElement(By.cssSelector("button.button"));
+        WebElement shadowRoot2 = getShadowDOM(root,driver);
+        WebElement submitForm = shadowRoot2.findElement(By.cssSelector("button.button"));
         submitForm.submit();
         System.out.println("Sign-in button has been clicked");
         System.out.println("Parent Profile View Page");

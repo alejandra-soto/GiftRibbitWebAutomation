@@ -20,10 +20,10 @@ public class ParentLogin {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
         // BUG API URL
-        String appURL = "https://bug-api.dvcphyfdliprj.amplifyapp.com/";
+        //String appURL = "https://bug-api.dvcphyfdliprj.amplifyapp.com/";
         
         // STAGING URL
-        //String appURL = "https://staging.dvcphyfdliprj.amplifyapp.com/";
+        String appURL = "https://staging.dvcphyfdliprj.amplifyapp.com/";
        
         // driver.get() does the same as driver.navigate().to()
         // Thread.sleep(1000);
@@ -46,7 +46,7 @@ public class ParentLogin {
         
         // Find Email Element and Input Email Address
         WebElement emailInput = shadowRoot1.findElement(By.id("email"));
-        emailInput.sendKeys("doodleboop.dale.dan.dawson@gmail.com");
+        emailInput.sendKeys("alejandra.soto.50@my.csun.edu");
         System.out.println("Email address has been entered");
         
         // Find Password Element and Input Password
@@ -58,9 +58,12 @@ public class ParentLogin {
         WebElement submitForm = shadowRoot1.findElement(By.cssSelector("button.button"));
         submitForm.submit();
         System.out.println("Sign-in button has been clicked");
+        System.out.println("Parent Profile View Page");
        
+        Thread.sleep(10000);
+        
         //Close the browser
-        //driver.quit();
+        driver.quit();
 
 	}
 	public static WebElement getShadowDOM(WebElement element, WebDriver driver) {

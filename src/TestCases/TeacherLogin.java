@@ -55,12 +55,16 @@ public class TeacherLogin {
         System.out.println("Password has been entered");
 
         // Find Sign-in Button and Click button 
-        WebElement submitForm = shadowRoot1.findElement(By.cssSelector("button.button"));
+        WebElement shadowRoot2 = getShadowDOM(root,driver);
+        WebElement submitForm = shadowRoot2.findElement(By.cssSelector("button.button"));
         submitForm.submit();
         System.out.println("Sign-in button has been clicked");
+        System.out.println("Teacher Profile View Page");
        
+        Thread.sleep(10000);
+        
         //Close the browser
-        //driver.quit();
+        driver.quit();
 
 	}
 	public static WebElement getShadowDOM(WebElement element, WebDriver driver) {

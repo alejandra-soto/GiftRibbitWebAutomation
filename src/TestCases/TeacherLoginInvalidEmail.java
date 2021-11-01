@@ -2,12 +2,13 @@ package TestCases;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class ParentLogin {
+public class TeacherLoginInvalidEmail {
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -45,8 +46,8 @@ public class ParentLogin {
         
         // Find Email Element and Input Email Address
         WebElement emailInput = shadowRoot1.findElement(By.id("email"));
-        emailInput.sendKeys("alejandra.soto.50@my.csun.edu");
-        System.out.println("Email address has been entered");
+        emailInput.sendKeys("doodleboop.dale.dan.dawson");
+        System.out.println("Invalid email address has been entered");
         
         // Find Password Element and Input Password
         WebElement passInput = shadowRoot1.findElement(By.id("password"));
@@ -58,7 +59,7 @@ public class ParentLogin {
         WebElement submitForm = shadowRoot2.findElement(By.cssSelector("button.button"));
         submitForm.submit();
         System.out.println("Sign-in button has been clicked");
-        System.out.println("Parent Profile View Page");
+        System.out.println("Teacher is blocked");
        
         Thread.sleep(50000);
         

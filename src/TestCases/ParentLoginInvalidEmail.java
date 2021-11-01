@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class ParentLogin {
+public class ParentLoginInvalidEmail {
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -45,7 +45,7 @@ public class ParentLogin {
         
         // Find Email Element and Input Email Address
         WebElement emailInput = shadowRoot1.findElement(By.id("email"));
-        emailInput.sendKeys("alejandra.soto.50@my.csun.edu");
+        emailInput.sendKeys("alejandra.soto.50");
         System.out.println("Email address has been entered");
         
         // Find Password Element and Input Password
@@ -58,9 +58,9 @@ public class ParentLogin {
         WebElement submitForm = shadowRoot2.findElement(By.cssSelector("button.button"));
         submitForm.submit();
         System.out.println("Sign-in button has been clicked");
-        System.out.println("Parent Profile View Page");
+        System.out.println("Parent is blocked");
        
-        Thread.sleep(50000);
+        Thread.sleep(9000);
         
         //Close the browser
         driver.quit();

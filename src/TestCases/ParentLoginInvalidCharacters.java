@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class ParentLogin {
+public class ParentLoginInvalidCharacters {
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -50,15 +50,15 @@ public class ParentLogin {
         
         // Find Password Element and Input Password
         WebElement passInput = shadowRoot1.findElement(By.id("password"));
-        passInput.sendKeys("test1234");
-        System.out.println("Password has been entered");
+        passInput.sendKeys("12");
+        System.out.println("Invalid password has been entered");
 
         // Find Sign-in Button and Click button 
         WebElement shadowRoot2 = getShadowDOM(root,driver);
         WebElement submitForm = shadowRoot2.findElement(By.cssSelector("button.button"));
         submitForm.submit();
         System.out.println("Sign-in button has been clicked");
-        System.out.println("Parent Profile View Page");
+        System.out.println("Parent is blocked");
        
         Thread.sleep(50000);
         

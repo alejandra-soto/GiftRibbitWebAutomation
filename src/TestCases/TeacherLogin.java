@@ -20,10 +20,10 @@ public class TeacherLogin {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
         // BUG API URL
-        String appURL = "https://bug-api.dvcphyfdliprj.amplifyapp.com/";
+        //String appURL = "https://bug-api.dvcphyfdliprj.amplifyapp.com/";
         
         // STAGING URL
-        //String appURL = "https://staging.dvcphyfdliprj.amplifyapp.com/";
+        String appURL = "https://staging.dvcphyfdliprj.amplifyapp.com/";
        
         // driver.get() does the same as driver.navigate().to()
         // Thread.sleep(1000);
@@ -61,7 +61,7 @@ public class TeacherLogin {
         System.out.println("Sign-in button has been clicked");
         System.out.println("Teacher Profile View Page");
        
-        Thread.sleep(10000);
+        Thread.sleep(50000);
         
         //Close the browser
         driver.quit();
